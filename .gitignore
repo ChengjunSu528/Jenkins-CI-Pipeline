@@ -1,24 +1,22 @@
-pipeline {
-    agent any
+# Logs
+logs/
+*.log
+npm-debug.log*
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                // Execute build commands, such as compiling the code
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-                // Execute testing commands, such as running unit tests
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-                // Execute deployment commands, such as deploying code to the server
-            }
-        }
-    }
-}
+# Dependency directories
+node_modules/
+target/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE/project files
+*.idea/
+*.vscode/
+.DS_Store
+
+# Build output
+dist/
+out/
